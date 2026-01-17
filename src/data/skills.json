@@ -1,0 +1,32 @@
+{
+  "frontend": [
+    { "name": "React", "icon": "FaReact", "proficiency": 95, "yearsOfExperience": 5 },
+    { "name": "TypeScript", "icon": "SiTypescript", "proficiency": 90, "yearsOfExperience": 4 },
+    { "name": "JavaScript", "icon": "SiJavascript", "proficiency": 95, "yearsOfExperience": 6 },
+    { "name": "Tailwind CSS", "icon": "SiTailwindcss", "proficiency": 90, "yearsOfExperience": 3 },
+    { "name": "Next.js", "icon": "SiNextdotjs", "proficiency": 80, "yearsOfExperience": 2 },
+    { "name": "Vue.js", "icon": "FaVuejs", "proficiency": 75, "yearsOfExperience": 2 }
+  ],
+  "backend": [
+    { "name": ".NET Core", "icon": "SiDotnet", "proficiency": 90, "yearsOfExperience": 4 },
+    { "name": "Node.js", "icon": "FaNodeJs", "proficiency": 85, "yearsOfExperience": 4 },
+    { "name": "Python", "icon": "FaPython", "proficiency": 75, "yearsOfExperience": 3 },
+    { "name": "C#", "icon": "SiCsharp", "proficiency": 90, "yearsOfExperience": 4 },
+    { "name": "REST APIs", "icon": "FaServer", "proficiency": 95, "yearsOfExperience": 5 },
+    { "name": "GraphQL", "icon": "SiGraphql", "proficiency": 70, "yearsOfExperience": 2 }
+  ],
+  "databases": [
+    { "name": "SQL Server", "icon": "SiMicrosoftsqlserver", "proficiency": 90, "yearsOfExperience": 4 },
+    { "name": "PostgreSQL", "icon": "SiPostgresql", "proficiency": 85, "yearsOfExperience": 4 },
+    { "name": "MongoDB", "icon": "SiMongodb", "proficiency": 80, "yearsOfExperience": 3 },
+    { "name": "Redis", "icon": "SiRedis", "proficiency": 75, "yearsOfExperience": 2 }
+  ],
+  "tools": [
+    { "name": "Git", "icon": "FaGitAlt", "proficiency": 95, "yearsOfExperience": 6 },
+    { "name": "Docker", "icon": "FaDocker", "proficiency": 85, "yearsOfExperience": 3 },
+    { "name": "Azure", "icon": "SiMicrosoftazure", "proficiency": 80, "yearsOfExperience": 3 },
+    { "name": "AWS", "icon": "FaAws", "proficiency": 75, "yearsOfExperience": 2 },
+    { "name": "Kubernetes", "icon": "SiKubernetes", "proficiency": 65, "yearsOfExperience": 2 },
+    { "name": "CI/CD", "icon": "FaInfinity", "proficiency": 85, "yearsOfExperience": 4 }
+  ]
+}

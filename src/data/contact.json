@@ -1,0 +1,37 @@
+{
+  "email": "patelujjval001@gmail.com",
+  "phone": "+91 7203882990",
+  "location": "Chikhli, Gujrat, India 396521",
+  "availability": "Open to new opportunities",
+  "socialLinks": {
+    "github": {
+      "url": "https://github.com/Ujjval7",
+      "username": "@ujjval",
+      "icon": "FaGithub"
+    },
+    "linkedin": {
+      "url": "https://linkedin.com/in/ujjval-patel-355312280",
+      "username": "Ujjval Patel",
+      "icon": "FaLinkedin"
+    },
+    "twitter": {
+      "url": "https://twitter.com/alexchen",
+      "username": "@alexchen",
+      "icon": "FaTwitter"
+    },
+    "gmail": {
+      "url": "mailto:alex.chen@example.com",
+      "email": "alex.chen@example.com",
+      "icon": "SiGmail"
+    },
+    "resume": {
+      "url": "/resume.pdf",
+      "downloadUrl": "/resume.pdf",
+      "icon": "FaFileDownload"
+    }
+  },
+  "contactForm": {
+    "enabled": true,
+    "formspreeEndpoint": "https://formspree.io/f/your-form-id"
+  }
+}

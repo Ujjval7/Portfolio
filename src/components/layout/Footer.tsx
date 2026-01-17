@@ -1,0 +1,24 @@
+import { motion } from 'framer-motion';
+import { SocialLinks } from '@/components/ui/SocialLinks';
+import { FaHeart } from 'react-icons/fa';
+
+export function Footer() {
+  return (
+    <footer className="border-t border-border py-8">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-muted-foreground text-sm flex items-center gap-1"
+          >
+            Built with <FaHeart className="text-accent w-4 h-4 inline" /> by Alex Chen © {new Date().getFullYear()}
+          </motion.p>
+
+          <SocialLinks size="sm" />
+        </div>
+      </div>
+    </footer>
+  );
+}

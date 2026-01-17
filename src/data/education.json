@@ -1,0 +1,68 @@
+{
+  "degrees": [
+    {
+      "id": 1,
+      "institution": "Stanford University",
+      "logo": "/placeholder.svg",
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "period": "2015 - 2017",
+      "gpa": "3.9/4.0",
+      "location": "Stanford, CA",
+      "description": "Specialized in distributed systems and machine learning with a focus on scalable web architectures.",
+      "achievements": [
+        "Graduate Research Assistant in Systems Lab",
+        "Published 2 papers on distributed computing",
+        "Dean's List all semesters"
+      ]
+    },
+    {
+      "id": 2,
+      "institution": "UC Berkeley",
+      "logo": "/placeholder.svg",
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "period": "2011 - 2015",
+      "gpa": "3.7/4.0",
+      "location": "Berkeley, CA",
+      "description": "Strong foundation in algorithms, data structures, and software engineering principles.",
+      "achievements": [
+        "Undergraduate Teaching Assistant for CS61B",
+        "Winner of HackBerkeley 2014",
+        "Member of ACM student chapter"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "name": "Azure Solutions Architect Expert",
+      "issuer": "Microsoft",
+      "date": "2023-06",
+      "credentialId": "AZ-305-2023",
+      "credentialUrl": "https://learn.microsoft.com/certifications",
+      "icon": "SiMicrosoftazure",
+      "description": "Advanced certification for designing cloud solutions on Azure."
+    },
+    {
+      "id": 2,
+      "name": "AWS Certified Developer - Associate",
+      "issuer": "Amazon Web Services",
+      "date": "2022-09",
+      "credentialId": "AWS-DEV-2022",
+      "credentialUrl": "https://aws.amazon.com/certification",
+      "icon": "FaAws",
+      "description": "Certification for developing and maintaining AWS-based applications."
+    },
+    {
+      "id": 3,
+      "name": "Professional Scrum Master I",
+      "issuer": "Scrum.org",
+      "date": "2021-03",
+      "credentialId": "PSM-I-2021",
+      "credentialUrl": "https://scrum.org/certifications",
+      "icon": "SiJira",
+      "description": "Certification demonstrating mastery of Scrum framework."
+    }
+  ]
+}

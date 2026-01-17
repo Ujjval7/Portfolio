@@ -1,0 +1,14 @@
+{
+  "name": "Ujjval Patel",
+  "profileImage": "/placeholder.svg",
+  "rotatingTitles": [
+    "Software Developer",
+    ".NET Developer",
+    "Full Stack Developer",
+    "Web Developer"
+  ],
+  "tagline": "Building digital experiences that matter",
+  "bio": "I'm a passionate full-stack developer with 5+ years of experience crafting elegant solutions to complex problems. I specialize in building scalable web applications using modern technologies like React, .NET, and cloud services. When I'm not coding, you'll find me exploring new technologies or contributing to open-source projects.",
+  "location": "San Francisco, CA",
+  "available": true
+}

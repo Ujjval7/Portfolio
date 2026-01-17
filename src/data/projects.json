@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "title": "CloudSync Pro",
+    "description": "Enterprise-grade file synchronization platform with real-time collaboration features.",
+    "longDescription": "A comprehensive cloud storage solution that enables teams to collaborate in real-time. Features include version control, conflict resolution, and seamless integration with popular productivity tools.",
+    "image": "/placeholder.svg",
+    "technologies": ["React", ".NET Core", "Azure Blob Storage", "SignalR", "SQL Server"],
+    "category": "Web Application",
+    "featured": true,
+    "githubLink": "https://github.com/example/cloudsync-pro",
+    "liveLink": "https://cloudsync-pro.example.com",
+    "startDate": "2023-01",
+    "endDate": "2023-08",
+    "highlights": [
+      "Handles 100,000+ concurrent users",
+      "99.9% uptime SLA",
+      "End-to-end encryption for all files"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "DevMetrics Dashboard",
+    "description": "Analytics dashboard for tracking development team productivity and code quality metrics.",
+    "longDescription": "An intuitive dashboard that aggregates data from multiple sources including GitHub, Jira, and CI/CD pipelines to provide actionable insights for development teams.",
+    "image": "/placeholder.svg",
+    "technologies": ["React", "TypeScript", "D3.js", "Node.js", "MongoDB"],
+    "category": "Web Application",
+    "featured": true,
+    "githubLink": "https://github.com/example/devmetrics",
+    "liveLink": "https://devmetrics.example.com",
+    "startDate": "2022-06",
+    "endDate": "2022-12",
+    "highlights": [
+      "Integration with 20+ development tools",
+      "Custom report generation",
+      "AI-powered productivity insights"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "TaskFlow API",
+    "description": "RESTful API service for task management with advanced scheduling capabilities.",
+    "longDescription": "A robust API backend that powers task management applications with features like recurring tasks, dependencies, and smart notifications.",
+    "image": "/placeholder.svg",
+    "technologies": [".NET Core", "Entity Framework", "Redis", "RabbitMQ", "PostgreSQL"],
+    "category": "Backend Service",
+    "featured": false,
+    "githubLink": "https://github.com/example/taskflow-api",
+    "liveLink": null,
+    "startDate": "2022-01",
+    "endDate": "2022-05",
+    "highlights": [
+      "Handles 1M+ API requests daily",
+      "Sub-100ms response times",
+      "Comprehensive API documentation"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "EcoTracker Mobile",
+    "description": "Mobile-first web app for tracking personal carbon footprint and sustainability goals.",
+    "longDescription": "An engaging progressive web app that helps users track and reduce their environmental impact through gamification and community challenges.",
+    "image": "/placeholder.svg",
+    "technologies": ["React", "PWA", "Firebase", "Chart.js", "Tailwind CSS"],
+    "category": "Web Application",
+    "featured": true,
+    "githubLink": "https://github.com/example/ecotracker",
+    "liveLink": "https://ecotracker.example.com",
+    "startDate": "2023-03",
+    "endDate": "2023-07",
+    "highlights": [
+      "50,000+ active users",
+      "Featured in App Store",
+      "Partnership with 10 eco-brands"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "CodeSnippet Manager",
+    "description": "Developer tool for organizing, sharing, and discovering code snippets.",
+    "longDescription": "A productivity tool that helps developers save time by organizing their code snippets with smart tagging, syntax highlighting, and team sharing features.",
+    "image": "/placeholder.svg",
+    "technologies": ["Vue.js", "Electron", "SQLite", "Prism.js"],
+    "category": "Developer Tool",
+    "featured": false,
+    "githubLink": "https://github.com/example/codesnippet",
+    "liveLink": null,
+    "startDate": "2021-08",
+    "endDate": "2021-12",
+    "highlights": [
+      "Cross-platform desktop app",
+      "Offline-first architecture",
+      "GitHub Gist integration"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "AI Content Generator",
+    "description": "Content creation platform powered by machine learning for marketing teams.",
+    "longDescription": "An AI-powered platform that helps marketing teams generate high-quality content including blog posts, social media updates, and email campaigns.",
+    "image": "/placeholder.svg",
+    "technologies": ["React", "Python", "FastAPI", "OpenAI", "PostgreSQL"],
+    "category": "AI/ML",
+    "featured": false,
+    "githubLink": "https://github.com/example/ai-content",
+    "liveLink": "https://ai-content.example.com",
+    "startDate": "2023-06",
+    "endDate": "Present",
+    "highlights": [
+      "Generates 10,000+ pieces of content monthly",
+      "Multi-language support",
+      "Brand voice customization"
+    ]
+  }
+]
