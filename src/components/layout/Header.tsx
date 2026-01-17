@@ -26,7 +26,7 @@ export function Header() {
           {/* Logo */}
           <motion.a
             href="#home"
-            className="font-display font-bold text-xl text-foreground"
+            className="text-xl font-['Pacifico'] text-foreground"
             whileHover={{ scale: 1.05 }}
             onClick={(e) => {
               e.preventDefault();

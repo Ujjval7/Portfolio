@@ -5,6 +5,7 @@ import { SectionTitle } from '@/components/ui/SectionTitle';
 import { PortfolioCard } from '@/components/ui/PortfolioCard';
 import { StaggerContainer, StaggerItem } from '@/components/animations/StaggerContainer';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import fallbackImage from "@/assets/fallback.png"
 
 const categories = ['All', 'Web Application', 'Backend Service', 'Developer Tool', 'AI/ML'];
 
@@ -51,9 +52,12 @@ export function Projects() {
                   {/* Project Image */}
                   <div className="relative overflow-hidden rounded-lg mb-4 group">
                     <motion.img
-                      src={project.image}
+                      src={project.image || fallbackImage}
                       alt={project.title}
                       className="w-full h-48 object-cover"
+                      onError={(e) => {
+                        e.currentTarget.src = fallbackImage;
+                      }}
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.3 }}
                     />
@@ -67,9 +71,9 @@ export function Projects() {
                   {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-lg font-display font-bold text-foreground">
-                        {project.title}
-                      </h3>
+                     <h3 className="text-lg font-display font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                      {project.title}
+                    </h3>
                       <span className="text-xs text-muted-foreground">
                         {project.category}
                       </span>

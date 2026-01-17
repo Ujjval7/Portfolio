@@ -6,6 +6,7 @@ import { SlideIn } from '@/components/animations/SlideIn';
 import { StaggerContainer, StaggerItem } from '@/components/animations/StaggerContainer';
 import { FaGraduationCap, FaCertificate, FaMapMarkerAlt, FaExternalLinkAlt, FaAws } from 'react-icons/fa';
 import { SiJira } from 'react-icons/si';
+import fallbackImage from "@/assets/fallback.png"
 
 const certIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   SiMicrosoftazure: FaAws,
@@ -36,9 +37,12 @@ export function Education() {
                   <div className="flex-shrink-0">
                     <div className="w-20 h-20 rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
                       <img
-                        src={degree.logo}
+                        src={degree.logo || fallbackImage}
                         alt={degree.institution}
                         className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.src = fallbackImage;
+                        }}
                       />
                     </div>
                   </div>
@@ -47,7 +51,7 @@ export function Education() {
                   <div className="flex-1">
                     <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                       <div>
-                        <h3 className="text-xl font-display font-bold text-foreground">
+                        <h3 className="text-xl font-display font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
                           {degree.degree}
                         </h3>
                         <p className="text-accent font-medium">{degree.institution}</p>

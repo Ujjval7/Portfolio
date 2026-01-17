@@ -41,7 +41,7 @@ export function Contact() {
           <FadeIn direction="left">
             <div className="space-y-6">
               <PortfolioCard>
-                <h3 className="text-xl bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+                <h3 className="text-xl text-sm text-muted-foreground mb-6">
                   Let's Connect
                 </h3>
 
@@ -52,7 +52,7 @@ export function Contact() {
                       <FaMapMarkerAlt className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <p className="bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">Location</p>
+                      <p className="text-sm text-muted-foreground">Location</p>
                       <p className="font-medium text-foreground">{contactData.location}</p>
                     </div>
                   </div>

@@ -11,8 +11,9 @@ import {
   SiTypescript, SiJavascript, SiTailwindcss, SiNextdotjs, SiDotnet, SiSharp, SiGraphql,
   SiPostgresql, SiMongodb, SiRedis, SiKubernetes
 } from 'react-icons/si';
+import { IconType } from 'react-icons';
 
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+const iconMap: Record<string, IconType> = {
   FaReact,
   FaVuejs,
   FaNodeJs,
@@ -36,6 +37,32 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   SiRedis,
   SiMicrosoftazure: FaAws,
   SiKubernetes,
+};
+
+const iconColors: Record<string, string> = {
+  FaReact: '#61DAFB',
+  FaVuejs: '#4FC08D',
+  FaNodeJs: '#339933',
+  FaPython: '#3776AB',
+  FaGitAlt: '#F05032',
+  FaDocker: '#2496ED',
+  FaAws: '#232F3E',
+  FaServer: '#FFB13B',
+  FaInfinity: '#666666',
+  FaDatabase: '#336791',
+  SiTypescript: '#3178C6',
+  SiJavascript: '#F7DF1E',
+  SiTailwindcss: '#06B6D4',
+  SiNextdotjs: '#000000',
+  SiDotnet: '#512BD4',
+  SiCsharp: '#239120',
+  SiGraphql: '#E10098',
+  SiMicrosoftsqlserver: '#CC2927',
+  SiPostgresql: '#4169E1',
+  SiMongodb: '#47A248',
+  SiRedis: '#DC382D',
+  SiMicrosoftazure: '#0078D4',
+  SiKubernetes: '#326CE5',
 };
 
 const categoryLabels: Record<string, string> = {
@@ -62,9 +89,11 @@ export function Skills() {
               delay={categoryIndex * 0.1}
             >
               <PortfolioCard className="h-full">
-                <h3 className="text-xl font-display font-bold text-foreground mb-6 flex items-center gap-2">
+                <h3 className="text-xl font-display font-bold mb-6 flex items-center gap-2">
                   <span className="w-8 h-1 bg-accent rounded-full" />
-                  {categoryLabels[category]}
+                  <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                    {categoryLabels[category]}
+                  </span>
                 </h3>
 
                 <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -79,12 +108,15 @@ export function Skills() {
                         >
                           <div className="flex flex-col items-center text-center">
                             {IconComponent && (
-                              <IconComponent className="w-8 h-8 text-accent mb-2 group-hover:scale-110 transition-transform" />
+                              <IconComponent 
+                                className="w-8 h-8 mb-2 group-hover:scale-110 transition-transform"
+                                color={iconColors[skill.icon]}
+                              />
                             )}
-                            <span className="text-sm font-medium text-foreground">
+                            <span className="text-sm font-medium text-foreground font-['Space_Grotesk']">
                               {skill.name}
                             </span>
-                            {/* Proficiency bar */}
+                            {/* Proficiency bar
                             <div className="w-full h-1 bg-secondary rounded-full mt-2 overflow-hidden">
                               <motion.div
                                 className="h-full bg-accent rounded-full"
@@ -94,9 +126,9 @@ export function Skills() {
                                 transition={{ duration: 1, delay: 0.2 }}
                               />
                             </div>
-                            <span className="text-xs text-muted-foreground mt-1">
+                            <span className="text-xsgi text-muted-foreground mt-1">
                               {skill.yearsOfExperience}+ years
-                            </span>
+                            </span> */}
                           </div>
                         </motion.div>
                       </StaggerItem>

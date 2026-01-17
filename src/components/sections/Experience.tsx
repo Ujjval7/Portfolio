@@ -4,6 +4,7 @@ import { SectionTitle } from '@/components/ui/SectionTitle';
 import { PortfolioCard } from '@/components/ui/PortfolioCard';
 import { StaggerContainer, StaggerItem } from '@/components/animations/StaggerContainer';
 import { FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
+import fallbackImage from "@/assets/fallback.png"
 
 export function Experience() {
   return (
@@ -36,13 +37,16 @@ export function Experience() {
                       <div className="flex items-start gap-4 mb-4">
                         <div className="w-12 h-12 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0 overflow-hidden">
                           <img
-                            src={exp.logo}
+                            src={exp.logo || fallbackImage}
                             alt={exp.company}
                             className="w-full h-full object-cover"
+                            onError={(e) => {
+                              e.currentTarget.src = fallbackImage;
+                            }}
                           />
                         </div>
                         <div>
-                          <h3 className="text-xl font-display font-bold text-foreground">
+                          <h3 className="text-xl font-display font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
                             {exp.role}
                           </h3>
                           <p className="text-accent font-medium">{exp.company}</p>
