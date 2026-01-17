@@ -14,19 +14,14 @@
       "username": "Ujjval Patel",
       "icon": "FaLinkedin"
     },
-    "twitter": {
-      "url": "https://twitter.com/alexchen",
-      "username": "@alexchen",
-      "icon": "FaTwitter"
-    },
     "gmail": {
-      "url": "mailto:alex.chen@example.com",
-      "email": "alex.chen@example.com",
+      "url": "mailto:patelujjval001@gmail.com",
+      "email": "patelujjval001@gmail.com",
       "icon": "SiGmail"
     },
     "resume": {
-      "url": "/resume.pdf",
-      "downloadUrl": "/resume.pdf",
+      "url": "https://drive.google.com/file/d/1v4facuxnuV5gcQmN_CuJhiVHa9reVMKp/view?usp=sharing",
+      "downloadUrl": "https://drive.google.com/file/d/1v4facuxnuV5gcQmN_CuJhiVHa9reVMKp/view?usp=sharing",
       "icon": "FaFileDownload"
     }
   },

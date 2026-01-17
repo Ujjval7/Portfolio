@@ -13,7 +13,7 @@ export function Footer() {
             viewport={{ once: true }}
             className="text-muted-foreground text-sm flex items-center gap-1"
           >
-            Built with <FaHeart className="text-accent w-4 h-4 inline" /> by Alex Chen © {new Date().getFullYear()}
+            Built with <FaHeart className="text-accent w-4 h-4 inline" /> by Ujjval Patel © {new Date().getFullYear()}
           </motion.p>
 
           <SocialLinks size="sm" />

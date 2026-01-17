@@ -1,9 +1,10 @@
+
 [
   {
     "id": 1,
-    "company": "TechCorp Solutions",
-    "logo": "/placeholder.svg",
-    "role": "Senior Full Stack Developer",
+    "company": "Popway Software Pvt. Ltd, Surat",
+    "logo": "/src/assets/popway.png",
+    "role": ".NET Full Stack Developer",
     "period": "Jan 2022 - Present",
     "duration": "2+ years",
     "location": "San Francisco, CA (Remote)",
@@ -23,12 +24,12 @@
   },
   {
     "id": 2,
-    "company": "Digital Innovations Inc",
-    "logo": "/placeholder.svg",
-    "role": "Full Stack Developer",
-    "period": "Jun 2019 - Dec 2021",
+    "company": "Skyttus private Limited, Valsad",
+    "logo": "/src/assets/skyttus.jpg",
+    "role": "Internship",
+    "period": "Jan 2023 - Jun 2023",
     "duration": "2.5 years",
-    "location": "New York, NY",
+    "location": "Valsad, Gujarat",
     "description": "Developed and maintained multiple client-facing web applications for Fortune 500 companies.",
     "responsibilities": [
       "Built responsive web applications using React and TypeScript",
@@ -42,27 +43,5 @@
       "Received 'Employee of the Quarter' award twice"
     ],
     "technologies": ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS", "Redis"]
-  },
-  {
-    "id": 3,
-    "company": "StartupHub",
-    "logo": "/placeholder.svg",
-    "role": "Junior Developer",
-    "period": "Aug 2017 - May 2019",
-    "duration": "1.8 years",
-    "location": "Austin, TX",
-    "description": "Contributed to the development of an innovative SaaS platform for small businesses.",
-    "responsibilities": [
-      "Developed frontend components using Vue.js",
-      "Assisted in database design and optimization",
-      "Participated in code reviews and pair programming",
-      "Fixed bugs and improved application performance"
-    ],
-    "achievements": [
-      "Implemented feature that increased user engagement by 25%",
-      "Created internal tooling that saved 10 hours per week",
-      "Quickly promoted from intern to full-time developer"
-    ],
-    "technologies": ["Vue.js", "JavaScript", "Python", "MySQL", "Git"]
   }
 ]

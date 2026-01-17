@@ -33,7 +33,7 @@ export function Header() {
               scrollToSection('home');
             }}
           >
-            Ujjval
+            Ujjval Patel
           </motion.a>
 
           {/* Navigation */}

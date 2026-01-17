@@ -176,6 +176,7 @@ export function Contact() {
                   className="w-full px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:opacity-90 disabled:opacity-50 transition-opacity"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
+                  hidden
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </motion.button>

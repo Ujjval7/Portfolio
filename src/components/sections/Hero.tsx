@@ -109,6 +109,7 @@ export function Hero() {
                   className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
+                  target="_blank"
                 >
                   <FaDownload className="w-4 h-4" />
                   Download Resume
