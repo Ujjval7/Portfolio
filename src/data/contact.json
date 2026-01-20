@@ -2,7 +2,8 @@
   "email": "patelujjval001@gmail.com",
   "phone": "+91 7203882990",
   "location": "Chikhli, Gujrat, India 396521",
-  "availability": "Open to new opportunities",
+  "availability": "Currently available for new projects and opportunities! Whether you need a dedicated team member or a skilled freelancer, I'm ready to bring creativity and technical expertise to your vision.",
+  "unavailabilityMessage": "I'm currently occupied, but don't hesitate to reach out! I'll respond as soon as I'm available.",
   "socialLinks": {
     "github": {
       "url": "https://github.com/Ujjval7",

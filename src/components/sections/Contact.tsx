@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import contactData from '@/data/contact.json';
+import aboutData from '@/data/about.json';
 import { SectionTitle } from '@/components/ui/SectionTitle';
 import { PortfolioCard } from '@/components/ui/PortfolioCard';
 import { SocialLinks } from '@/components/ui/SocialLinks';
@@ -98,15 +99,19 @@ export function Contact() {
                   </div>
                 </div>
 
-                {/* Availability Badge */}
-                <div className="mt-6 pt-6 border-t border-border">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-sm text-foreground font-medium">
-                      {contactData.availability}
-                    </span>
-                  </div>
+               {/* Availability Badge */}
+              <div className="mt-6 pt-6 border-t border-border">
+                <div className="flex items-center gap-2">
+                  <span 
+                    className={`w-2 h-2 rounded-full animate-pulse ${
+                      aboutData.available ? 'bg-green-500' : 'bg-red-600'
+                    }`} 
+                  />
+                  <span className="text-sm text-foreground font-medium">
+                    {aboutData.available ? contactData.availability : contactData.unavailabilityMessage}
+                  </span>
                 </div>
+              </div>
               </PortfolioCard>
 
               {/* Social Links */}

@@ -52,7 +52,11 @@ export function Hero() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent/20 glow">
+              <div className={`w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 transition-all duration-500 ${
+                aboutData.available 
+                  ? 'border-blue-500/50 drop-shadow-[0_0_35px_rgba(59,130,246,0.6)]' 
+                  : 'border-red-500/50 drop-shadow-[0_0_35px_rgba(239,68,68,0.6)]'
+              }`}>
                 <img
                   src={profileImage}
                   alt={aboutData.name}
@@ -60,15 +64,25 @@ export function Hero() {
                 />
               </div>
               {/* Status indicator */}
-              {aboutData.available && (
+              {aboutData.available ? (
                 <motion.div
                   className="absolute bottom-4 right-4 flex items-center gap-2 bg-card px-3 py-1.5 rounded-full shadow-lg border border-border"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
                   <span className="text-xs font-medium text-foreground">Available</span>
+                </motion.div>
+              ):(
+                <motion.div
+                  className="absolute bottom-4 right-4 flex items-center gap-2 bg-card px-3 py-1.5 rounded-full shadow-lg border border-border"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 0.5 }}
+                >
+                  <span className="w-2 h-2 bg-red-600 rounded-full animate-pulse" />
+                  <span className="text-xs font-medium text-foreground">Busy</span>
                 </motion.div>
               )}
             </motion.div>
@@ -77,11 +91,11 @@ export function Hero() {
           {/* Content */}
           <div className="text-center lg:text-left max-w-2xl">
             <FadeIn delay={0.1}>
-              <p className="text-muted-foreground mb-2 text-lg">Hello, I'm</p>
+              <p className="text-muted-foreground mb-2 text-lg">Greetings! myself</p>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-4">
+              <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-4 capitalize">
                 {aboutData.name}
               </h1>
             </FadeIn>
