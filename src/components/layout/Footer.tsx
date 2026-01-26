@@ -11,9 +11,9 @@ export function Footer() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-muted-foreground text-sm flex items-center gap-1"
+            className="text-muted-foreground text-sm flex items-center gap-1 font-['Grechen-Fuemen']"
           >
-            Built with <FaHeart className="text-accent w-4 h-4 inline" /> by Ujjval Patel © {new Date().getFullYear()}
+            Built with <FaHeart className="text-accent w-4 h-4 inline" /> by <span className="font-['Charm']">Ujjval Patel</span> © {new Date().getFullYear()}
           </motion.p>
 
           <SocialLinks size="sm" />

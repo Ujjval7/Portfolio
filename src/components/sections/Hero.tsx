@@ -95,7 +95,7 @@ export function Hero() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <h1 className="text-4xl md:text-6xl font-['Grechen_Fuemen'] font-display font-bold text-foreground mb-4 capitalize">
+              <h1 className="text-4xl md:text-6xl font-['Charm'] font-display font-bold text-foreground mb-4 capitalize">
                 {aboutData.name}
               </h1>
             </FadeIn>

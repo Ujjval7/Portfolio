@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import { NAV_ITEMS } from '@/utils/constants';
 import { useScrollSpy } from '@/hooks/useScrollSpy';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
-import { CustomTooltip } from '@/components/ui/CustomTooltip';
+import { AnimatedTooltip } from '@/components/ui/AnimatedTooltip';
+import aboutData from '@/data/about.json';
 
 export function Header() {
   const activeSection = useScrollSpy();
@@ -13,6 +14,8 @@ export function Header() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const Name = (aboutData.name).split(' ')[0];
 
   return (
     <motion.header
@@ -26,14 +29,14 @@ export function Header() {
           {/* Logo */}
           <motion.a
             href="#home"
-            className="text-xl font-['Grechen_Fuemen'] text-foreground"
+            className="text-xl font-['Grechen_Fuemen'] text-foreground capitalize"
             whileHover={{ scale: 1.05 }}
             onClick={(e) => {
               e.preventDefault();
               scrollToSection('home');
             }}
           >
-            Ujjval
+            {Name}
           </motion.a>
 
           {/* Navigation */}
@@ -43,7 +46,13 @@ export function Header() {
               const isActive = activeSection === item.id;
 
               return (
-                <CustomTooltip key={item.id} content={item.label}>
+                <AnimatedTooltip 
+                  key={item.id} 
+                  content={item.label}
+                  side="bottom"
+                  sideOffset={12}
+                  delayDuration={200}
+                >
                   <motion.button
                     onClick={() => scrollToSection(item.id)}
                     className={`relative p-3 rounded-full transition-colors ${
@@ -63,7 +72,7 @@ export function Header() {
                       />
                     )}
                   </motion.button>
-                </CustomTooltip>
+                </AnimatedTooltip>
               );
             })}
           </nav>
