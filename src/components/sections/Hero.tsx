@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
-import { FaDownload, FaArrowDown } from 'react-icons/fa';
+import { FaDownload, FaArrowDown, FaFile, FaEye, } from 'react-icons/fa';
 import aboutData from '@/data/about.json';
 import contactData from '@/data/contact.json';
 import { RotatingText } from '@/components/ui/RotatingText';
 import { SocialLinks } from '@/components/ui/SocialLinks';
 import { FadeIn } from '@/components/animations/FadeIn';
 import profileImage from '@/assets/profile.jpg';
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 
 export function Hero() {
   const scrollToContact = () => {
@@ -44,9 +45,9 @@ export function Hero() {
       />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 ">
           {/* Profile Image */}
-          <FadeIn direction="left" className="flex-shrink-0">
+          <FadeIn direction="left" className="flex-shrink-0 pl-5">
             <motion.div
               className="relative"
               whileHover={{ scale: 1.02 }}
@@ -96,16 +97,16 @@ export function Hero() {
 
             <FadeIn delay={0.2}>
               <h1 className="text-4xl md:text-6xl font-['Charm'] font-display font-bold text-foreground mb-4 capitalize">
-                {aboutData.name}
+                <span className="font-['Charm']">{aboutData.name}</span>
               </h1>
             </FadeIn>
 
-            <FadeIn delay={0.3}>
+            <FadeIn delay={0.3} className=''>
               <RotatingText texts={aboutData.rotatingTitles} />
             </FadeIn>
 
             <FadeIn delay={0.4}>
-              <p className="text-lg text-muted-foreground mt-6 mb-4">
+              <p className="text-lg text-muted-foreground mb-2">
                 {aboutData.tagline}
               </p>
             </FadeIn>
@@ -118,16 +119,40 @@ export function Hero() {
 
             <FadeIn delay={0.6}>
               <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                <motion.a
-                  href={contactData.socialLinks.resume.downloadUrl}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  target="_blank"
-                >
-                  <FaDownload className="w-4 h-4" />
-                  Download Resume
-                </motion.a>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <motion.button
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:opacity-90 transition-opacity"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <FaFile className="w-4 h-4" />
+                      Resume
+                    </motion.button>
+                  </PopoverTrigger>
+                  <PopoverContent side="right" align="center" sideOffset={2} className="w-48 p-2">
+                    <div className="flex flex-col gap-1">
+                      <a
+                        href={contactData.socialLinks.resume.ViewUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-3 py-2 rounded-md hover:border-accent hover:text-accent hover:bg-accent/10 transition-colors cursor-pointer"
+                      >
+                        <FaEye className="w-4 h-4" />
+                        <span className="text-sm font-medium text-white">View Resume</span>
+                      </a>
+                      <a
+                        href={contactData.socialLinks.resume.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-3 py-2 rounded-md hover:border-accent hover:text-accent hover:bg-accent/10 transition-colors cursor-pointer"
+                      >
+                        <FaDownload className="w-4 h-4" />
+                        <span className="text-sm font-medium text-white">Download PDF</span>
+                      </a>
+                    </div>
+                  </PopoverContent>
+                </Popover>
                 <motion.button
                   onClick={scrollToContact}
                   className="inline-flex items-center gap-2 px-6 py-3 border-2 border-border text-foreground font-semibold rounded-lg hover:border-accent hover:text-accent transition-colors"

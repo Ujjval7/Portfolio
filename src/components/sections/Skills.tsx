@@ -113,7 +113,7 @@ export function Skills() {
                                 color={iconColors[skill.icon]}
                               />
                             )}
-                            <span className="text-sm font-medium text-foreground font-['Space_Grotesk']">
+                            <span className="text-sm font-medium text-foreground font-['Space_Grotesk'] group-hover:text-accent group-hover:scale-110 transition-all duration-200 inline-block">
                               {skill.name}
                             </span>
                             {/* Proficiency bar

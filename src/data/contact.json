@@ -21,8 +21,8 @@
       "icon": "SiGmail"
     },
     "resume": {
-      "url": "https://drive.google.com/file/d/1v4facuxnuV5gcQmN_CuJhiVHa9reVMKp/view?usp=sharing",
-      "downloadUrl": "https://drive.google.com/file/d/1v4facuxnuV5gcQmN_CuJhiVHa9reVMKp/view?usp=sharing",
+      "url": "https://drive.usercontent.google.com/u/0/uc?id=1v4facuxnuV5gcQmN_CuJhiVHa9reVMKp&export=download",
+      "ViewUrl": "https://drive.google.com/file/d/1v4facuxnuV5gcQmN_CuJhiVHa9reVMKp/preview",
       "icon": "FaFileDownload"
     }
   },

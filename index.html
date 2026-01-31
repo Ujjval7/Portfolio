@@ -3,24 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ujjval Patel | Portfolio</title>
+    <title>Patel Ujjval</title> <!-- Fallback Text  -->
     <link rel="icon" href="./src/assets/fallback.png" />
     <meta name="description" content="Ujjval - Full Stack Developer specializing in React, .NET, and cloud technologies. View my projects, experience, and get in touch." />
     <meta name="author" content="Ujjval" />
-
-    <!-- Import Grechen Fuemen font for preloader -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Grechen+Fuemen&display=swap" rel="stylesheet">
-
     <meta property="og:title" content="Ujjval Patel | Full Stack Developer" />
     <meta property="og:description" content="Full Stack Developer specializing in .NET." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@ujjval" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <script>
+      const capitalizeWords = (str) =>  str.replace(/\b\w/g, d => d.toUpperCase());
+      fetch('./src/data/about.json').then(res => res.json()).then(data => document.title = capitalizeWords(data.name)).catch(err => console.error(err));
+    </script>
   </head>
 
   <body>

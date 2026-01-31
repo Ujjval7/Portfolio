@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { SocialLinks } from '@/components/ui/SocialLinks';
 import { FaHeart } from 'react-icons/fa';
+import aboutData from '@/data/about.json';
 
 export function Footer() {
   return (
@@ -13,7 +14,7 @@ export function Footer() {
             viewport={{ once: true }}
             className="text-muted-foreground text-sm flex items-center gap-1 font-['Grechen-Fuemen']"
           >
-            Built with <FaHeart className="text-accent w-4 h-4 inline" /> by <span className="font-['Charm']">Ujjval Patel</span> © {new Date().getFullYear()}
+            Built with <FaHeart className="text-accent w-4 h-4 inline" /> by <span className="font-['Charm']">{aboutData.name}</span> © {new Date().getFullYear()}
           </motion.p>
 
           <SocialLinks size="sm" />

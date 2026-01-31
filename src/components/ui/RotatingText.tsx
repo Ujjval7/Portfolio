@@ -18,7 +18,7 @@ export function RotatingText({ texts, interval = 3000 }: RotatingTextProps) {
   }, [texts.length, interval]);
 
   return (
-    <div className="h-10 md:h-12 overflow-hidden">
+    <div className="h-10 md:h-12 overflow-hidden pt-3">
       <AnimatePresence mode="wait">
         <motion.span
           key={currentIndex}
