@@ -29,7 +29,7 @@ export function Header() {
           {/* Logo */}
           <motion.a
             href="#home"
-            className="text-xl font-['Grechen_Fuemen'] text-foreground capitalize"
+            className="text-3xl font-['Grechen_Fuemen'] text-foreground capitalize bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
             onClick={(e) => {
               e.preventDefault();

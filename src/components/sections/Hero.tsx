@@ -7,10 +7,33 @@ import { SocialLinks } from '@/components/ui/SocialLinks';
 import { FadeIn } from '@/components/animations/FadeIn';
 import profileImage from '@/assets/profile.jpg';
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { useMemo, useState } from 'react';
 
 export function Hero() {
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const nameCharacters = useMemo(() => {
+    const normalizedName = aboutData.name.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');                                              
+    
+    return normalizedName.split('').map((char, index) => {
+      const isFirstChar = index === 0 || normalizedName[index - 1] === ' ';
+      return { char, index, isFirstChar};
+    });
+  }, []);
+
+  const getScale = (index: number) => {
+    if (hoveredIndex === null) return 1;
+    
+    const distance = Math.abs(index - hoveredIndex);
+    
+    if (distance === 0) return 1.15; 
+    if (distance === 1) return 1.05; 
+    if (distance === 2) return 1.02; 
+    return 1;
   };
 
   return (
@@ -96,8 +119,33 @@ export function Hero() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <h1 className="text-4xl md:text-6xl font-['Charm'] font-display font-bold text-foreground mb-4 capitalize">
-                <span className="font-['Charm']">{aboutData.name}</span>
+              <h1 
+                className="text-4xl md:text-6xl font-['Charm'] font-display font-bold text-foreground mb-4"
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                {nameCharacters.map((item) => (
+                  <motion.span
+                    key={item.index}
+                    className={`inline-block font-['Charm'] ${
+                      item.isFirstChar ? 'text-red-500' : ''
+                    }`}
+                    onMouseEnter={() => setHoveredIndex(item.index)}
+                    animate={{
+                      scale: getScale(item.index),
+                    }}
+                    transition={{
+                      type: 'spring',
+                      stiffness: 400,
+                      damping: 17,
+                    }}
+                    style={{
+                      display: 'inline-block',
+                      transformOrigin: 'center',
+                    }}
+                  >
+                    {item.char === ' ' ? '\u00A0' : item.char}
+                  </motion.span>
+                ))}
               </h1>
             </FadeIn>
 

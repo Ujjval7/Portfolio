@@ -7,17 +7,6 @@ interface PreloaderProps {
   onLoadingComplete: () => void;
 }
 
-// Define proper easing as tuple
-const customEase: Easing = [0.2, 0.65, 0.3, 0.9];
-
-// Function to capitalize first letter of each word
-const capitalizeName = (name: string): string => {
-  return name
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join(' ');
-};
-
 export function Preloader({ onLoadingComplete }: PreloaderProps) {
   const [isVisible, setIsVisible] = useState(true);
   const { theme } = useTheme();
@@ -36,13 +25,11 @@ export function Preloader({ onLoadingComplete }: PreloaderProps) {
     }, 400);
   };
 
-  // Get first name from about data and capitalize it
-  const fullName = capitalizeName(aboutData.name);
-  const firstName = fullName.split(' ')[0]; 
-  const letters = firstName.split('');
+  const letters = ((aboutData.name).split(" ")[0]).split('');
+
 
   // Theme-based background colors
-  const bgColor = theme === 'dark' ? 'bg-gradient-to-br from-background via-background to-accent/5' : 'bg-[#1a1a1a]';
+  const bgColor = theme === 'dark' ? 'bg-gradient-to-br from-background via-background to-accent/5' : 'bg-white';
 
   return (
     <AnimatePresence onExitComplete={handleAnimationComplete}>
@@ -54,7 +41,7 @@ export function Preloader({ onLoadingComplete }: PreloaderProps) {
           transition={{ duration: 0.5, ease: 'easeInOut' }}
         >
           {/* Main text container */}
-          <div className="relative py-20 px-8">
+          <div className="relative py-20 px-4 sm:px-8 md:px-16 lg:px-2">
             {/* The dynamic name text */}
             <div className="flex items-end text-6xl md:text-8xl lg:text-9xl tracking-tight">
               {letters.map((letter, i) => (
@@ -75,9 +62,10 @@ export function Preloader({ onLoadingComplete }: PreloaderProps) {
                   transition={{
                     duration: 0.5,
                     delay: i * 0.15,
-                    ease: customEase,
+                    ease: [0.2, 0.65, 0.3, 0.9],
                   }}
-                  className="relative inline-block bg-gradient-to-br from-[#00c9a7] via-[#00d4aa] to-[#f0a060] bg-clip-text text-transparent font-['Grechen_Fuemen']"
+                  className={`relative inline-block bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent font-['Grechen_Fuemen'] ${i == 0 ? 'capitalize' : ''}`}
+
                 >
                   {letter}
                 </motion.span>
