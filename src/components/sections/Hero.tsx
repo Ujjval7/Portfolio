@@ -17,7 +17,7 @@ export function Hero() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const nameCharacters = useMemo(() => {
-    const normalizedName = aboutData.name.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');                                              
+    const normalizedName = (((aboutData.name).toLowerCase()).split(' ')).map(word => ((word.charAt(0)).toUpperCase()) + word.slice(1)).join(' ');                                              
     
     return normalizedName.split('').map((char, index) => {
       const isFirstChar = index === 0 || normalizedName[index - 1] === ' ';
@@ -31,8 +31,7 @@ export function Hero() {
     const distance = Math.abs(index - hoveredIndex);
     
     if (distance === 0) return 1.15; 
-    if (distance === 1) return 1.05; 
-    if (distance === 2) return 1.02; 
+    if (distance === 1) return 1.1; 
     return 1;
   };
 
@@ -106,7 +105,7 @@ export function Hero() {
                   transition={{ delay: 0.5 }}
                 >
                   <span className="w-2 h-2 bg-red-600 rounded-full animate-pulse" />
-                  <span className="text-xs font-medium text-foreground">Busy</span>
+                  <span className="text-xs font-medium text-foreground">Occupied</span>
                 </motion.div>
               )}
             </motion.div>
@@ -122,6 +121,7 @@ export function Hero() {
               <h1 
                 className="text-4xl md:text-6xl font-['Charm'] font-display font-bold text-foreground mb-4"
                 onMouseLeave={() => setHoveredIndex(null)}
+                onTouchEnd={() => setHoveredIndex(null)}
               >
                 {nameCharacters.map((item) => (
                   <motion.span
@@ -130,6 +130,7 @@ export function Hero() {
                       item.isFirstChar ? 'text-red-500' : ''
                     }`}
                     onMouseEnter={() => setHoveredIndex(item.index)}
+                    onTouchStart={() => setHoveredIndex(item.index)}
                     animate={{
                       scale: getScale(item.index),
                     }}

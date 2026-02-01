@@ -3,7 +3,7 @@
     {
       "id": 1,
       "institution": "Stanford University",
-      "logo": "/placeholder.svg",
+      "logo": "/placeholder.png",
       "degree": "Master of Science",
       "field": "Computer Science",
       "period": "2015 - 2017",
@@ -19,7 +19,7 @@
     {
       "id": 2,
       "institution": "UC Berkeley",
-      "logo": "/placeholder.svg",
+      "logo": "/placeholder.png",
       "degree": "Bachelor of Science",
       "field": "Computer Science",
       "period": "2011 - 2015",
